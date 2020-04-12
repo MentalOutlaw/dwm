@@ -1,0 +1,5 @@
+#!/bin/sh
+#gives you a dmenu prompt to confirm if you want to exit X
+
+[ $(echo -e "No\nYes" | dmenu -i -p "$1") \
+== "Yes" ] && $2
