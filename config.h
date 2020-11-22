@@ -72,9 +72,9 @@ static const char *monitor[] = { "/usr/bin/htop", NULL };
 //sets urxvt as the default terminal
 static const char *termcmd[]  = { "urxvt", NULL };
 //volume controls
-static const char *upvol[]   = { "amixer", "set", "Master", "3+",     NULL };
-static const char *downvol[] = { "amixer", "set", "Master", "3-",     NULL };
-static const char *mutevol[] = { "amixer", "set", "Master", "toggle", NULL };
+static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
+static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
+static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 
 #include "shiftview.c"
 static char *endx[] = { "/bin/sh", "-c", "endx", "externalpipe", NULL };
